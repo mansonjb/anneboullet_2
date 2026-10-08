@@ -607,7 +607,8 @@ html{scroll-behavior:smooth}
    photos sans arrondi, grands titres alignés à gauche,
    boutons remplacés par des liens soulignés, vert d'Anne en accent.
    ================================================================= */
-:root{--ink:#1F1C19;--soft:#6F675E;--paper:#F5F2EC;--line:rgba(31,28,25,.16);--accent:#46523F;--surface:#46523F;--tint:#E6E2D8;--fs:normal;--gut:28px}
+:root{--ink:#1F1C19;--soft:#6F675E;--paper:#F5F2EC;--line:rgba(31,28,25,.16);--fs:normal;--gut:28px}
+html[data-fond="blanc"]{--paper:#FFFFFF}
 html,body{background:var(--paper)}
 .page{background:var(--paper);color:var(--ink);font-family:var(--font-sans),"Helvetica Neue",Arial,sans-serif;font-size:16px;letter-spacing:-0.005em}
 .wrap.v2{max-width:none;padding:0 var(--gut)}
@@ -650,13 +651,11 @@ html,body{background:var(--paper)}
 .v2-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 50%,rgba(0,0,0,.38) 100%)}
 .v2-hero-t{position:absolute;z-index:2;left:var(--gut);right:var(--gut);bottom:56px;margin:0;font-size:clamp(64px,10.5vw,176px);line-height:.88;letter-spacing:-0.045em}
 .v2-hero-t span{display:block}
-.v2-hero-t span:nth-child(2){padding-left:8vw}
-.v2-hero-t span:nth-child(3){padding-left:16vw}
 .v2-hero-geo{position:absolute;z-index:2;right:var(--gut);bottom:24px;margin:0;font-size:12px;opacity:.85}
 
 /* intro : grande phrase pleine largeur puis paragraphe */
 .v2-intro{padding:120px 0 40px}
-.v2-statement{font-size:clamp(36px,5.2vw,80px);line-height:1.02;letter-spacing:-0.035em;margin:0;text-indent:12vw}
+.v2-statement{font-size:clamp(36px,5.2vw,80px);line-height:1.02;letter-spacing:-0.035em;margin:0}
 .v2-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:32px;margin-top:120px}
 .v2-label{font-size:18px;line-height:1.15;margin:0}
 .v2-para{font-size:clamp(22px,2.1vw,32px);line-height:1.25;letter-spacing:-0.02em;margin:0}
@@ -736,7 +735,7 @@ html,body{background:var(--paper)}
 .field input,.field select,.field textarea{border-radius:0;background:transparent;border:0;border-bottom:1px solid var(--ink);padding-left:0}
 .pro2,.cta-band,.contact{border-radius:0}
 .cta-band{background:var(--tint);text-align:left;align-items:flex-start}
-.contact{background:#EDE8DF}
+
 .acc-item{border-color:var(--line)}
 .ft{border-top:1px solid var(--line);margin-top:180px}
 .v2-wordmark{font-size:clamp(72px,15.5vw,260px);line-height:.85;letter-spacing:-0.05em;margin:96px 0 0;white-space:nowrap}
@@ -767,3 +766,26 @@ html,body{background:var(--paper)}
 .partners a:hover,.p-links a:hover{color:var(--accent);background:transparent}
 .partners a:hover span:not(.serif){color:var(--soft)}
 .partners a:hover svg{stroke:var(--accent)}
+
+/* harmonie : toute la fin de page suit la couleur et le fond choisis */
+.pro2,.cta-band,.contact{--bandbg:var(--tint);background:var(--tint)}
+.pro2-tab,.pro2-empty,.frise .f-n,.form-ok{background:var(--paper)}
+.pro2-tab.on{background:var(--surface)}
+.field input,.field select,.field textarea{background:transparent;border-color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.who{background:transparent}
+.v2-n,.v2-big sup,.pro2-n{color:var(--accent)}
+.v2-wordmark{color:var(--accent)}
+.v2-steps li{border-top-color:var(--accent)}
+.v2-steps a:hover,.v2-links a:hover,.v2-zones a:hover,.nav-links a:hover{color:var(--accent)}
+.hd-over .nav-links a:hover{color:#fff}
+
+/* sélecteur : couleur + fond, carré et sobre */
+.switch{border-radius:0;background:var(--paper);border:1px solid var(--line);box-shadow:0 6px 24px rgba(31,28,25,.10);font-family:var(--font-sans),sans-serif;padding:8px 10px 8px 16px}
+.switch .sw{border-color:var(--paper)}
+.switch .lbl-fond{margin-left:6px;padding-left:14px;border-left:1px solid var(--line)}
+.switch .fonds{display:flex;gap:6px}
+.switch .fd{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:0 10px;border:1px solid var(--line);background:transparent;font:inherit;font-size:12px;color:var(--ink);cursor:pointer}
+.switch .fd i{width:12px;height:12px;border:1px solid rgba(31,28,25,.3)}
+.switch .fd[aria-pressed="true"]{border-color:var(--ink)}
+@media (max-width:640px){.switch .lbl-fond{display:none}.switch .fd{padding:0 7px}.switch .sw{width:22px;height:22px}}
