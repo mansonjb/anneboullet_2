@@ -789,3 +789,8 @@ html,body{background:var(--paper)}
 .switch .fd i{width:12px;height:12px;border:1px solid rgba(31,28,25,.3)}
 .switch .fd[aria-pressed="true"]{border-color:var(--ink)}
 @media (max-width:640px){.switch .lbl-fond{display:none}.switch .fd{padding:0 7px}.switch .sw{width:22px;height:22px}}
+
+/* listes déroulantes : plus de rendu natif arrondi, un filet et un chevron fin */
+.field select{-webkit-appearance:none;appearance:none;border-radius:0;border:0;border-bottom:1px solid var(--ink);background-color:transparent;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%231F1C19' stroke-width='1.2'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 2px center;background-size:12px 8px;padding:10px 28px 10px 0;cursor:pointer;color:var(--ink)}
+.field select:focus{border-bottom-color:var(--accent)}
+.field select::-ms-expand{display:none}
