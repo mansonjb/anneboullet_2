@@ -727,17 +727,17 @@ export const faq: { groupe: string; items: Faq[] }[] = [
 /* Liens vérifiés le 08/10/2026 ; sans lien = site non trouvé.         */
 /* ------------------------------------------------------------------ */
 
-export type Partenaire = { nom: string; metier: string; url?: string };
+export type Partenaire = { nom: string; metier: string; url?: string; logo?: string }; // logo : public/partenaires/
 
 export const partenaires: Record<string, Partenaire> = {
-  maestro: { nom: "Travaux Maestro", metier: "Travaux de rénovation" },
+  maestro: { nom: "Travaux Maestro", metier: "Assistance à maîtrise d'ouvrage", logo: "maestro.jpg" },
   cbsols: { nom: "CB Sols", metier: "Revêtements de sol", url: "https://cbsols.fr" },
-  design17: { nom: "Design 17", metier: "Cuisiniste, La Rochelle", url: "https://www.design17.fr" },
+  design17: { nom: "Design 17", metier: "Cuisine, salle de bains, dressing", url: "https://www.design17.fr", logo: "design17.jpg" },
   dma: { nom: "Décoration Matériaux Atlantique", metier: "Cheministe, poêles et inserts" },
-  ryser: { nom: "Ryser", metier: "Peintures et conseil couleur, La Rochelle", url: "https://ryser.fr" },
+  ryser: { nom: "Ryser", metier: "Papiers peints et peintures", url: "https://ryser.fr", logo: "ryser.jpg" },
   cedeo: { nom: "Cedeo", metier: "Sanitaire et salle de bains", url: "https://www.cedeo.fr" },
   aubade: { nom: "Aubade", metier: "Salle de bains", url: "https://www.espace-aubade.fr" },
-  labrouche: { nom: "Labrouche Antiquaire", metier: "Antiquaire de matériaux, Aytré" },
+  labrouche: { nom: "Labrouche Antiquaire", metier: "Antiquaire de matériaux, Aytré", logo: "labrouche.jpg" },
   rohane: { nom: "La Forge de Rohane", metier: "Ferronnerie" },
   brossard: { nom: "Menuiserie Brossard", metier: "Menuiserie et agencement" },
   concas: { nom: "Samuel Concas", metier: "Architecte" },
