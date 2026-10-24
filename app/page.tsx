@@ -10,6 +10,7 @@ import { missions, services } from "@/data/site";
 import { JsonLd } from "@/components/blocks";
 
 const oleron = getProjet("maison-de-famille-saint-denis-d-oleron") as Projet;
+const surf = getProjet("decoration-maison-esprit-surf-la-rochelle") as Projet;
 
 
 const matieres = [
@@ -46,11 +47,11 @@ export default function Home() {
           />
           <section className="v2-hero">
             <Ph
-              photo={oleron.photos[0]}
+              photo={surf.photos[0]}
               className="v2-hero-ph"
               sizes="100vw"
               preload
-              alt="Séjour de la maison de famille à Saint-Denis-d'Oléron : charpente apparente, bois blond, lin et rotin"
+              alt="Salon au mur terracotta, bibliothèque et fauteuils en cuir, maison de famille esprit surf à La Rochelle"
             />
             <h1 className="v2-hero-t serif">
               <span>Décoratrice</span>

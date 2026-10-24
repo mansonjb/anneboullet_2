@@ -648,7 +648,7 @@ html,body{background:var(--paper)}
 /* hero plein cadre */
 .v2-hero{position:relative;margin:0 calc(var(--gut) * -1);height:100svh;min-height:560px;overflow:hidden;color:#fff}
 .v2-hero .ph{position:absolute !important;inset:0;aspect-ratio:auto !important;height:100%}
-.v2-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 50%,rgba(0,0,0,.38) 100%)}
+.v2-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.32) 0,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 42%,rgba(0,0,0,.5) 100%),linear-gradient(90deg,rgba(0,0,0,.35) 0,rgba(0,0,0,0) 65%)}
 .v2-hero-t{position:absolute;z-index:2;left:var(--gut);right:var(--gut);bottom:56px;margin:0;font-size:clamp(64px,10.5vw,176px);line-height:.88;letter-spacing:-0.045em}
 .v2-hero-t span{display:block}
 .v2-hero-geo{position:absolute;z-index:2;right:var(--gut);bottom:24px;margin:0;font-size:12px;opacity:.85}
